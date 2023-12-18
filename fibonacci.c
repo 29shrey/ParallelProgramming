@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<omp.h>
-//fib
+
 int fib(int n){
     int i,j;
     if(n<2) 
@@ -22,8 +22,8 @@ void main(){
     double start = omp_get_wtime();
     #pragma omp parallel for
     for(int i=0;i<n;i++){
-        int t = omp_get_thread_num();
-        printf("thread: %d fib(%d) = %d\n",t,i,fib(i));
+    int t = omp_get_thread_num();
+    printf("thread: %d fib(%d) = %d\n",t,i,fib(i));
     }
     double end = omp_get_wtime();
 
