@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<omp.h>
-//iterns
+
 void main(){
     int iterns,i,itern[8];
     printf("enter iterns:");
